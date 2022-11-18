@@ -1,0 +1,11 @@
+{
+  "name": "@mklp/landing",
+  "private": true,
+  "workspaces": [
+    "web"
+  ],
+  "packageManager": "yarn@3.3.0",
+  "devDependencies": {
+    "prettier": "^2.7.1"
+  }
+}
