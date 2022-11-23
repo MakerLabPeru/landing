@@ -20,6 +20,7 @@ plugins:
   - '@typescript-eslint'
 
 rules:
+  class-methods-use-this: off
   import/extensions:
     - error
     - never
@@ -35,3 +36,19 @@ rules:
     - extensions:
         - jsx
         - tsx
+
+overrides:
+  - files: '**/*.stories.*'
+    rules:
+      import/no-extraneous-dependencies:
+        - error
+        - devDependencies: true
+  - files:
+      - jest.setup.js
+      - '**/*.test.*'
+    plugins:
+      - jest
+    extends:
+      - plugin:jest/recommended
+    env:
+      jest/globals: true

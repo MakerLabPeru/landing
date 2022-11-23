@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Disclosure Default 1`] = `
+<section>
+  <header
+    aria-controls="🅰0"
+    aria-expanded={false}
+    className="flex justify-between items-center p-4 md:px-8 md:py-6 text-lg bg-slate-100 text-zinc-900"
+    role="button"
+    style={
+      {
+        "backgroundColor": "rgba(248, 250, 252, 1)",
+        "color": "rgba(24, 24, 27, 1)",
+      }
+    }
+    tabIndex={0}
+  >
+    <h3>
+      ¿Qué es el MakerLab?
+    </h3>
+    <svg
+      className="transition-transform text-xl rotate-180"
+      fill="currentColor"
+      height="1em"
+      stroke="currentColor"
+      strokeWidth="0"
+      style={
+        {
+          "color": undefined,
+        }
+      }
+      viewBox="0 0 24 24"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M0 0h24v24H0z"
+        fill="none"
+      />
+      <path
+        d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"
+      />
+    </svg>
+  </header>
+  <div
+    aria-hidden={true}
+    className="overflow-hidden visible"
+    id="🅰0"
+    style={
+      {
+        "height": 0,
+        "opacity": 0,
+        "visibility": "hidden",
+      }
+    }
+  >
+    <div
+      className="p-4 md:p-8 bg-gray-50"
+    >
+      MakerLab es una comunidad tecnológica que une a varias
+    personas con la misma pasión de aprender y enseñar.
+    </div>
+  </div>
+</section>
+`;
