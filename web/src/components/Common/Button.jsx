@@ -3,10 +3,13 @@ import {useCallback} from 'react';
 
 function Button({children, to = '/'}) {
   const router = useRouter();
-  const handleClick = useCallback((e) => {
-    e.preventDefault();
-    router.push(to);
-  }, [router, to]);
+  const handleClick = useCallback(
+    e => {
+      e.preventDefault();
+      router.push(to);
+    },
+    [router, to],
+  );
 
   return (
     <button

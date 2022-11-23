@@ -1,9 +1,7 @@
 import Coach from '~/components/Coach';
 
 function CoachPage() {
-  return (
-    <Coach />
-  );
+  return <Coach />;
 }
 
 export default CoachPage;

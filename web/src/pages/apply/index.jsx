@@ -1,9 +1,7 @@
 import Apply from '~/components/Apply';
 
 function ApplyPage() {
-  return (
-    <Apply />
-  );
+  return <Apply />;
 }
 
 export default ApplyPage;

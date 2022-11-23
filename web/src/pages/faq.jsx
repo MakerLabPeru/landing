@@ -1,9 +1,7 @@
 import FAQ from '~/components/FAQ';
 
 function FAQPage() {
-  return (
-    <FAQ />
-  );
+  return <FAQ />;
 }
 
 export default FAQPage;

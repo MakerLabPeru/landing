@@ -1,9 +1,7 @@
 import Community from '~/components/About/Community';
 
 function CommunityPage() {
-  return (
-    <Community />
-  );
+  return <Community />;
 }
 
 export default CommunityPage;

@@ -8,9 +8,7 @@ function Navbar() {
       <div className="flex container flex-wrap justify-between items-center mx-auto">
         <Logo />
         <Options />
-        <Button>
-          Postular ahora
-        </Button>
+        <Button>Postular ahora</Button>
       </div>
     </nav>
   );

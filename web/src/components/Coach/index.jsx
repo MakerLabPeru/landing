@@ -7,12 +7,7 @@ function Coach() {
 
   return (
     <Layout>
-      <h1 className="text-3xl font-bold underline">
-        Coach
-        {' '}
-        {coach}
-        !
-      </h1>
+      <h1 className="text-3xl font-bold underline">Coach {coach}!</h1>
     </Layout>
   );
 }

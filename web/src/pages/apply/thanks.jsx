@@ -1,9 +1,7 @@
 import Thanks from '~/components/Apply/Thanks';
 
 function ThanksPage() {
-  return (
-    <Thanks />
-  );
+  return <Thanks />;
 }
 
 export default ThanksPage;

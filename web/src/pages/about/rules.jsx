@@ -1,9 +1,7 @@
 import Rules from '~/components/About/Rules';
 
 function RulesPage() {
-  return (
-    <Rules />
-  );
+  return <Rules />;
 }
 
 export default RulesPage;
