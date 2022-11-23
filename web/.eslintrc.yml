@@ -1,3 +1,4 @@
+
 ---
 
 root: true
@@ -22,6 +23,8 @@ plugins:
 
 rules:
   class-methods-use-this: off
+  react/require-default-props: off
+
   import/extensions:
     - error
     - never
@@ -39,14 +42,20 @@ rules:
         - tsx
 
 overrides:
-  - files: '**/*.stories.*'
+  - files:
+      - "*.ts"
+      - "*.tsx"
+    rules:
+      no-undef: off
+
+  - files: '*.stories.*'
     rules:
       import/no-extraneous-dependencies:
         - error
         - devDependencies: true
   - files:
       - jest.setup.js
-      - '**/*.test.*'
+      - '*.test.*'
     plugins:
       - jest
     extends:
