@@ -5,6 +5,7 @@ parser: '@typescript-eslint/parser'
 extends:
   - plugin:@next/next/recommended
   - '@mklp/eslint-config/react'
+  - prettier
 
 settings:
   import/extensions: &extensions
