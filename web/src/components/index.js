@@ -1,1 +1,2 @@
-export * from './Common';
+export {default as Button} from './Button';
+export {default as Disclosure} from './Disclosure';

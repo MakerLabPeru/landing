@@ -1,4 +1,4 @@
-import FAQ from '~/components/FAQ';
+import FAQ from '~/views/FAQ';
 
 function FAQPage() {
   return <FAQ />;

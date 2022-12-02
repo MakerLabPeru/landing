@@ -1,4 +1,4 @@
-import Coach from '~/components/Coach';
+import Coach from '~/views/Coach';
 
 function CoachPage() {
   return <Coach />;

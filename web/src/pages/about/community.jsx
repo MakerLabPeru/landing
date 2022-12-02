@@ -1,4 +1,4 @@
-import Community from '~/components/About/Community';
+import Community from '~/views/About/Community';
 
 function CommunityPage() {
   return <Community />;

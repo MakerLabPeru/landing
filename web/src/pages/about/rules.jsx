@@ -1,4 +1,4 @@
-import Rules from '~/components/About/Rules';
+import Rules from '~/views/About/Rules';
 
 function RulesPage() {
   return <Rules />;

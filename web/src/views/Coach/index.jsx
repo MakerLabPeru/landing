@@ -1,5 +1,5 @@
 import {useRouter} from 'next/router';
-import Layout from '../Layout';
+import Layout from '~/views/Layout';
 
 function Coach() {
   const router = useRouter();

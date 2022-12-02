@@ -1,4 +1,4 @@
-import Layout from '../Layout';
+import Layout from '~/views/Layout';
 
 function Home() {
   return (

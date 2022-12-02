@@ -1,4 +1,4 @@
-import Apply from '~/components/Apply';
+import Apply from '~/views/Apply';
 
 function ApplyPage() {
   return <Apply />;
