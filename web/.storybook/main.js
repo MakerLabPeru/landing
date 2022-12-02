@@ -18,6 +18,7 @@ module.exports = {
         },
       },
     },
+    "storybook-css-modules",
   ],
   framework: '@storybook/react',
   core: {

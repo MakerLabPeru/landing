@@ -1,0 +1,5 @@
+@tailwind base;
+
+.root:hover .button {
+    background-color: theme('colors.stone.700');
+}
