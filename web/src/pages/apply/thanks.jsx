@@ -1,4 +1,4 @@
-import Thanks from '~/components/Apply/Thanks';
+import Thanks from '~/views/Apply/Thanks';
 
 function ThanksPage() {
   return <Thanks />;

@@ -1,4 +1,4 @@
-import Hackathons from '~/components/Hackathons';
+import Hackathons from '~/views/Hackathons';
 
 function HackathonsPage() {
   return <Hackathons />;

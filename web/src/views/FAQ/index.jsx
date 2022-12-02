@@ -1,6 +1,6 @@
 import {Disclosure} from '~/components';
 
-import Layout from '../Layout';
+import Layout from '~/views/Layout';
 
 function FAQ() {
   return (

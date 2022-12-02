@@ -1,4 +1,4 @@
-import Button from '../../Common/Button';
+import Button from '~/components/Button';
 import Logo from './Logo';
 import Options from './Options';
 
