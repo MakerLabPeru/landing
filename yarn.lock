@@ -4120,6 +4120,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@storybook/expect@npm:storybook-jest":
+  version: 27.5.2-0
+  resolution: "@storybook/expect@npm:27.5.2-0"
+  dependencies:
+    "@types/jest": ">=26.0.0"
+  checksum: 09738a8f8e0b9d3d5a909c80ce0c101080cf376316ceca1f3820e88877d6b5ef92abd847b4c4a4e9687c43c2168a6e3e8cdd74947b6af622688797f74cf523df
+  languageName: node
+  linkType: hard
+
 "@storybook/instrumenter@npm:6.5.14":
   version: 6.5.14
   resolution: "@storybook/instrumenter@npm:6.5.14"
@@ -4143,6 +4152,18 @@ __metadata:
     core-js: ^3.8.2
     global: ^4.4.0
   checksum: bc4be0d2b2666eb8fe81f01dd47b459882c8fde0ad9701f6149f9c7bba29d11c88081334b4512638dda1f09e4df0c4afb1a3092d5a999005e20acf1723e07e3c
+  languageName: node
+  linkType: hard
+
+"@storybook/jest@npm:^0.0.10":
+  version: 0.0.10
+  resolution: "@storybook/jest@npm:0.0.10"
+  dependencies:
+    "@storybook/expect": storybook-jest
+    "@storybook/instrumenter": ^6.4.0
+    "@testing-library/jest-dom": ^5.16.2
+    jest-mock: ^27.3.0
+  checksum: 55427e81dc18fbfd8820e7b5cbf709d436917641808d588890ebc19ad7ffd3bdc5a253e1762e70c0d454930b8b7143b71f74bd7aa9c2c4a8a35ed70099a2825d
   languageName: node
   linkType: hard
 
@@ -4648,7 +4669,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/jest-dom@npm:^5.16.5":
+"@testing-library/jest-dom@npm:^5.16.2, @testing-library/jest-dom@npm:^5.16.5":
   version: 5.16.5
   resolution: "@testing-library/jest-dom@npm:5.16.5"
   dependencies:
@@ -4890,7 +4911,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jest@npm:*":
+"@types/jest@npm:*, @types/jest@npm:>=26.0.0":
   version: 29.2.3
   resolution: "@types/jest@npm:29.2.3"
   dependencies:
@@ -12729,7 +12750,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-mock@npm:^27.0.6":
+"jest-mock@npm:^27.0.6, jest-mock@npm:^27.3.0":
   version: 27.5.1
   resolution: "jest-mock@npm:27.5.1"
   dependencies:
@@ -19328,6 +19349,7 @@ __metadata:
     "@storybook/addon-postcss": ^2.0.0
     "@storybook/addon-storyshots": ^6.5.14
     "@storybook/builder-webpack5": ^6.5.14
+    "@storybook/jest": ^0.0.10
     "@storybook/manager-webpack5": ^6.5.14
     "@storybook/react": ^6.5.14
     "@storybook/test-runner": ^0.9.1
