@@ -3071,7 +3071,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-actions@npm:6.5.14, @storybook/addon-actions@npm:^6.5.13":
+"@storybook/addon-actions@npm:6.5.14, @storybook/addon-actions@npm:^6.5.14":
   version: 6.5.14
   resolution: "@storybook/addon-actions@npm:6.5.14"
   dependencies:
@@ -3163,7 +3163,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-docs@npm:6.5.14, @storybook/addon-docs@npm:^6.5.13":
+"@storybook/addon-docs@npm:6.5.14, @storybook/addon-docs@npm:^6.5.14":
   version: 6.5.14
   resolution: "@storybook/addon-docs@npm:6.5.14"
   dependencies:
@@ -3210,7 +3210,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-essentials@npm:^6.5.13":
+"@storybook/addon-essentials@npm:^6.5.14":
   version: 6.5.14
   resolution: "@storybook/addon-essentials@npm:6.5.14"
   dependencies:
@@ -3270,7 +3270,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-interactions@npm:^6.5.13":
+"@storybook/addon-interactions@npm:^6.5.14":
   version: 6.5.14
   resolution: "@storybook/addon-interactions@npm:6.5.14"
   dependencies:
@@ -3301,7 +3301,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-links@npm:^6.5.13":
+"@storybook/addon-links@npm:^6.5.14":
   version: 6.5.14
   resolution: "@storybook/addon-links@npm:6.5.14"
   dependencies:
@@ -3392,7 +3392,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-storyshots@npm:^6.5.13":
+"@storybook/addon-storyshots@npm:^6.5.14":
   version: 6.5.14
   resolution: "@storybook/addon-storyshots@npm:6.5.14"
   dependencies:
@@ -3687,7 +3687,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/builder-webpack5@npm:^6.5.13":
+"@storybook/builder-webpack5@npm:^6.5.14":
   version: 6.5.14
   resolution: "@storybook/builder-webpack5@npm:6.5.14"
   dependencies:
@@ -4195,7 +4195,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/manager-webpack5@npm:^6.5.13":
+"@storybook/manager-webpack5@npm:^6.5.14":
   version: 6.5.14
   resolution: "@storybook/manager-webpack5@npm:6.5.14"
   dependencies:
@@ -4340,7 +4340,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/react@npm:^6.5.13":
+"@storybook/react@npm:^6.5.14":
   version: 6.5.14
   resolution: "@storybook/react@npm:6.5.14"
   dependencies:
@@ -19320,16 +19320,16 @@ __metadata:
     "@mdx-js/react": ^1.6.22
     "@mklp/eslint-config": ^1.0.3
     "@next/eslint-plugin-next": ^13.0.4
-    "@storybook/addon-actions": ^6.5.13
-    "@storybook/addon-docs": ^6.5.13
-    "@storybook/addon-essentials": ^6.5.13
-    "@storybook/addon-interactions": ^6.5.13
-    "@storybook/addon-links": ^6.5.13
+    "@storybook/addon-actions": ^6.5.14
+    "@storybook/addon-docs": ^6.5.14
+    "@storybook/addon-essentials": ^6.5.14
+    "@storybook/addon-interactions": ^6.5.14
+    "@storybook/addon-links": ^6.5.14
     "@storybook/addon-postcss": ^2.0.0
-    "@storybook/addon-storyshots": ^6.5.13
-    "@storybook/builder-webpack5": ^6.5.13
-    "@storybook/manager-webpack5": ^6.5.13
-    "@storybook/react": ^6.5.13
+    "@storybook/addon-storyshots": ^6.5.14
+    "@storybook/builder-webpack5": ^6.5.14
+    "@storybook/manager-webpack5": ^6.5.14
+    "@storybook/react": ^6.5.14
     "@storybook/test-runner": ^0.9.1
     "@storybook/testing-library": ^0.0.13
     "@testing-library/jest-dom": ^5.16.5
