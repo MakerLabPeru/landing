@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint --ext js,jsx,ts,tsx src",
     "test": "jest",
+    "test-storybook": "test-storybook",
     "storybook": "start-storybook -p 6006 -s ./public",
     "build-storybook": "build-storybook -s public"
   },
