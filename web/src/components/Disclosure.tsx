@@ -43,7 +43,7 @@ const DisclosureContent = ({title, children}: DisclosureContentProps) => {
         closedClass="bg-slate-100 text-zinc-900"
       >
         <animated.header
-          className="flex justify-between items-center p-4 md:px-8 md:py-6 text-lg"
+          className="flex justify-between items-center p-4 md:px-8 md:py-6 text-lg focus:outline-none"
           style={triggerStyleSpring}
         >
           <h3>{title}</h3>
