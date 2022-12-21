@@ -3,7 +3,7 @@ import Footer from './Footer';
 
 function Layout({children}) {
   return (
-    <div className="flex flex-col h-screen">
+    <div className="flex flex-col h-screen bg-[#171717]">
       <Navbar />
       <div className="grow">{children}</div>
       <Footer />
