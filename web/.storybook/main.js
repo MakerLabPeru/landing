@@ -1,5 +1,7 @@
 const path = require('path');
 
+const {env: {NODE_ENV}} = process;
+
 module.exports = {
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
@@ -13,7 +15,7 @@ module.exports = {
     builder: {
       name: 'webpack5',
       options: {
-        lazyCompilation: true,
+        lazyCompilation: NODE_ENV !== 'test',
         fsCache: true,
       }
     },

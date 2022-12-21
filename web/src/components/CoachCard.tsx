@@ -40,7 +40,7 @@ export default ({img, title, name, ...rest}: CoachCardProps) => (
         // Min height as aspect-ratio fallback
         className={clsx(
           styles.button,
-          'mkl-btn bg-primary h-full flex-none aspect-square min-w-[40px] text-zinc-50 flex rounded-tl rounded-br',
+          'mkl-btn bg-primary-600 h-full flex-none aspect-square min-w-[40px] text-zinc-50 flex rounded-tl rounded-br',
         )}
         role="button"
       >

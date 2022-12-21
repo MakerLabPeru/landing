@@ -11,7 +11,7 @@ export const SocialButton = ({
   icon: Icon,
   ...rest
 }: SocialButtonProps) => (
-  <a target="_blank" rel="noopener" role="button" {...{...rest, href}}>
+  <a className="hover:bg-black/10" target="_blank" rel="noopener" role="button" {...{...rest, href}}>
     <Icon className="mx-4 my-3" size={21} />
   </a>
 );
