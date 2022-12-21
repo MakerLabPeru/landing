@@ -7,9 +7,9 @@ import {MdOutlineClose} from 'react-icons/md';
 type ConfirmationModalProps = {
   isOpen: boolean;
   content: ReactNode;
+  onClose?: () => void;
   onConfirmation?: () => void;
   onCancel?: () => void;
-  onClose?: () => void;
 };
 
 const BaseButton = ({
@@ -19,7 +19,7 @@ const BaseButton = ({
 }: ComponentPropsWithoutRef<'button'>) => (
   <Button>
     <button
-      className={clsx('rounded min-w-32 p-3 focus:outline-none', className)}
+      className={clsx('rounded min-w-32 p-3 font-bold focus:outline-none', className)}
       type="button"
       {...props}
     >
@@ -39,7 +39,7 @@ const ConfirmationButton = ({onClick}: {onClick: () => void}) => (
 
 const CancelButton = ({onClick}: {onClick: () => void}) => (
   <BaseButton
-    className="border-primary border-2 text-primary hover:bg-gray-200 hover-border-primary-700"
+    className="border-primary-700 border-2 text-primary-700 hover:bg-gray-200 hover-border-primary-700"
     {...{onClick}}
   >
     Cancel
@@ -48,7 +48,11 @@ const CancelButton = ({onClick}: {onClick: () => void}) => (
 
 const CloseButton = ({onClick}: {onClick: () => void}) => (
   <Button>
-    <button className="absolute right-3 top-3 text-xl focus:outline-none" type="button" {...{onClick}}>
+    <button
+      className="absolute right-3 top-3 text-xl focus:outline-none"
+      type="button"
+      {...{onClick}}
+    >
       <MdOutlineClose className="text-neutral-700" />
     </button>
   </Button>
@@ -58,8 +62,8 @@ const ConfirmationModal = ({
   isOpen,
   content,
   onConfirmation,
-  onCancel,
-  onClose = onCancel,
+  onClose,
+  onCancel = onClose,
 }: ConfirmationModalProps) => (
   <Modal open={isOpen}>
     <div
@@ -69,9 +73,9 @@ const ConfirmationModal = ({
       aria-hidden="true"
     />
     <Target>
-      <div className="rounded-md bg-gray-50 p-6">
-        <CloseButton />
-        <div className="p-4 text-center">{content}</div>
+      <div className="rounded-md bg-gray-50 p-6 md:p-8">
+        {onClose && <CloseButton onClick={onClose} />}
+        <div className="p-4 md:p-6 text-center font-bold">{content}</div>
         <div className="flex justify-between p-2 text-lg gap-6">
           <CancelButton onClick={onCancel} />
           <ConfirmationButton onClick={onConfirmation} />
