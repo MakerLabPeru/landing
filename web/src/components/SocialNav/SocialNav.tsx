@@ -9,7 +9,7 @@ const SOCIAL_DATA = [
 ];
 
 const SocialNav = () => (
-  <div className="bg-primary text-gray-50 inline-flex flex-col py-3 gap-1">
+  <div className="text-gray-50 inline-flex flex-col py-3 gap-1 bg-primary-600">
     {SOCIAL_DATA.map(({href, icon}) => (
       <SocialButton key={href} {...{href, icon}} />
     ))}

@@ -28,7 +28,7 @@ const DisclosureContent = ({title, children}: DisclosureContentProps) => {
   } = useTailwindConfig();
 
   const triggerStyleSpring = useSpring({
-    backgroundColor: isOpen ? colors.primary : colors.slate['50'],
+    backgroundColor: isOpen ? colors.primary['600'] : colors.slate['50'],
     color: isOpen ? colors.gray['50'] : colors.zinc['900'],
   });
   const targetStyleSpring = useSpring({
@@ -39,11 +39,11 @@ const DisclosureContent = ({title, children}: DisclosureContentProps) => {
   return (
     <section>
       <Trigger
-        openClass="bg-primary text-gray-50"
+        openClass="bg-primary-600 text-gray-50"
         closedClass="bg-slate-100 text-zinc-900"
       >
         <animated.header
-          className="flex justify-between items-center p-4 md:px-8 md:py-6 text-lg"
+          className="flex justify-between items-center p-4 md:px-8 md:py-6 text-lg focus:outline-none"
           style={triggerStyleSpring}
         >
           <h3>{title}</h3>
