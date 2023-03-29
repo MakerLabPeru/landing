@@ -6,6 +6,7 @@ parser: '@typescript-eslint/parser'
 extends:
   - plugin:@next/next/recommended
   - '@mklp/eslint-config/react'
+  - plugin:@typescript-eslint/recommended
   - prettier
 
 settings:
@@ -40,6 +41,8 @@ rules:
     - extensions:
         - jsx
         - tsx
+
+  react/button-has-type: off
 
 overrides:
   - files:

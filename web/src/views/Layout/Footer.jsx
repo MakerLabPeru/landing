@@ -1,4 +1,4 @@
-import Logo from './Navbar/Logo';
+import {Logo} from './Logo';
 
 function Footer() {
   return (

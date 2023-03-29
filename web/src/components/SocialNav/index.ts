@@ -1,1 +1,1 @@
-export {default as SocialNav} from './SocialNav';
+export * from './SocialNav';
