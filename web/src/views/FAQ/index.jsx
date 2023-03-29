@@ -1,7 +1,6 @@
 import {Disclosure} from '~/components';
 
-function FAQ() {
-  return (
+const FAQ = () => (
     <>
       <h1 className="text-3xl font-bold underline">Preguntas frecuentes</h1>
 
@@ -10,7 +9,6 @@ function FAQ() {
         misma pasión de aprender y enseñar.
       </Disclosure>
     </>
-  );
-}
+  )
 
 export default FAQ;

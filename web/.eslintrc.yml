@@ -65,3 +65,8 @@ overrides:
       - plugin:jest/recommended
     env:
       jest/globals: true
+
+  - files:
+      - "**/__mocks__/**/*"
+    rules:
+      "@typescript-eslint/no-var-requires": off

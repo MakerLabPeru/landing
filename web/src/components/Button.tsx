@@ -4,7 +4,7 @@ import {Link} from './Link';
 
 type ButtonProps = {
   children: ReactNode;
-} & ComponentProps<Link>;
+} & ComponentProps<typeof Link>;
 
 export const Button = ({children, ...rest}: ButtonProps) => (
   <Link {...rest}>

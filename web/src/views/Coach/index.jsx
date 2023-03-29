@@ -1,6 +1,6 @@
 import {useRouter} from 'next/router';
 
-function Coach() {
+const Coach = () => {
   const router = useRouter();
   const {coach} = router.query;
 

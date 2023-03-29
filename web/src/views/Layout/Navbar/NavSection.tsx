@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import {useCallback, forwardRef, useRef, ReactNode} from 'react';
+import {useCallback, forwardRef, ReactNode} from 'react';
 import {useRouter} from 'next/router';
 import useMeasure from 'react-use-measure';
 import {ToggleButton} from '@accessible/toggle-button';

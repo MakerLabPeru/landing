@@ -1,6 +1,6 @@
 import {ComponentStory, ComponentMeta} from '@storybook/react';
 
-import SocialNav from './SocialNav';
+import {SocialNav} from './SocialNav';
 
 export default {
   title: 'Components/SocialNav',

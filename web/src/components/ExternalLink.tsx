@@ -1,6 +1,6 @@
 import {HTMLProps} from 'react';
 
-type ExternalLinkProps = {} & HTMLProps<HTMLAnchorElement>;
+type ExternalLinkProps = HTMLProps<HTMLAnchorElement>;
 
 /** A glorified anchor tag */
 export const ExternalLink = ({href, children, ...rest}: ExternalLinkProps) => (
