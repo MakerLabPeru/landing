@@ -1,11 +1,11 @@
-import {useRouter, ComponentProps} from 'next/router';
+import {ComponentProps} from 'react';
+import {useRouter} from 'next/router';
 
 import {NavItem} from './NavItem';
 
 type NavButtonProps = {
   label: string;
-  children: ReactNode;
-} & ComponentProps<NavItem>;
+} & ComponentProps<typeof NavItem>;
 
 export const NavButton = ({label, href, ...rest}: NavButtonProps) => {
   const {pathname} = useRouter();

@@ -1,8 +1,8 @@
 import {createContext, useContext, useMemo, ReactNode} from 'react';
 
 type NavContextType = {
-  isMobile: boolean;
-  isSection: boolean;
+  isMobile?: boolean;
+  isSection?: boolean;
 };
 
 const NavContext = createContext<NavContextType>(null);

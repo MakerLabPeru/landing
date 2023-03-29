@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import {useCallback, forwardRef, ReactNode} from 'react';
+import {useCallback, forwardRef, ReactNode, ComponentProps} from 'react';
 import {useRouter} from 'next/router';
 import useMeasure from 'react-use-measure';
 import {ToggleButton} from '@accessible/toggle-button';
@@ -35,13 +35,10 @@ type NavSectionHeaderProps = {
   label: string;
   subpath: string;
 } & IsOpenProps &
-  ComponentProps<NavItem>;
+  ComponentProps<typeof NavItem>;
 
-const NavSectionHeader = forwardRef(
-  (
-    {className, subpath, label, isOpen, ...rest}: NavSectionHeaderProps,
-    ref,
-  ) => {
+const NavSectionHeader = forwardRef<HTMLDivElement, NavSectionHeaderProps>(
+  ({className, subpath, label, isOpen, ...rest}, ref) => {
     const {pathname} = useRouter();
 
     return (
@@ -101,7 +98,7 @@ export const NavSectionNonMobile = ({
   subpath,
   label,
   children,
-}: NavSectionNonMobileProps) => {
+}: NavSectionProps) => {
   const [isOpen, setOpen] = useBit(false);
 
   const onClickAway = useCallback(
@@ -118,18 +115,9 @@ export const NavSectionNonMobile = ({
   return (
     <ClickAwayListener {...{onClickAway}}>
       <span className="hidden md:block">
-        <Popover
-          repositiononresize
-          open={isOpen}
-          onChange={() => {
-            setOpen.toggle();
-          }}
-        >
+        <Popover repositionOnResize open={isOpen} onChange={setOpen.toggle}>
           <Trigger on="click">
-            <NavSectionHeader
-              {...{isOpen, subpath, label}}
-              onChange={setOpen}
-            />
+            <NavSectionHeader {...{isOpen, subpath, label}} />
           </Trigger>
 
           <Target>

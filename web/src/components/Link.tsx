@@ -4,13 +4,13 @@ import NextLink from 'next/link';
 
 import {ExternalLink} from './ExternalLink';
 
-type LinkProps = ComponentProps<NextLink>;
+type LinkProps = ComponentProps<typeof NextLink>;
 
 const isExternalUrl = (url: string) => url?.match(/^https?:\/\//) ?? false;
 
 export const Link = (props: LinkProps) => {
   const {href} = props;
-  const isExternal = isExternalUrl(href);
+  const isExternal = typeof href === 'string' ? isExternalUrl(href) : false;
 
   if (isExternal) {
     const anchorProps = omit(

@@ -3,7 +3,7 @@ import Image from 'next/image';
 import logoSvg from '~public/makerlab-logo.svg';
 import {Link} from '~/components';
 
-type LogoProps = ComponentProps<'a'>;
+type LogoProps = ComponentProps<'a'> & Pick<ComponentProps<typeof Image>, 'height'>;
 
 export const Logo = ({height = 40, ...rest}: LogoProps) => (
   <Link href="/" {...rest}>

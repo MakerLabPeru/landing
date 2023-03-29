@@ -21,7 +21,7 @@ const useMenuOpenState = () => {
     return () => router.events.off('routeChangeStart', setOpen.unset);
   }, [router, setOpen]);
 
-  return [isOpen, setOpen];
+  return [isOpen, setOpen] as ReturnType<typeof useBit>;
 };
 
 const useMenuSpring = (isOpen: boolean) => {
@@ -30,7 +30,7 @@ const useMenuSpring = (isOpen: boolean) => {
     top: isOpen ? 0 : -height || -1000,
   });
 
-  return [ref, mobileSpring];
+  return [ref, mobileSpring] as [typeof ref, typeof mobileSpring];
 };
 
 const MobileNavbarContent = ({children}: MobileNavContentContainerProps) => {

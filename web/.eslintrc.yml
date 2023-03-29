@@ -50,12 +50,14 @@ overrides:
       - "*.tsx"
     rules:
       no-undef: off
+      react/prop-types: off
 
   - files: '*.stories.*'
     rules:
       import/no-extraneous-dependencies:
         - error
         - devDependencies: true
+
   - files:
       - jest.setup.js
       - '*.test.*'
