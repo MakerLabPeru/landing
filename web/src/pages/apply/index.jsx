@@ -1,7 +1,5 @@
 import Apply from '~/views/Apply';
 
-function ApplyPage() {
-  return <Apply />;
-}
+const ApplyPage = () => <Apply />
 
 export default ApplyPage;

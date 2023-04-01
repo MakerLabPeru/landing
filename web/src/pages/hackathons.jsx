@@ -1,7 +1,5 @@
 import Hackathons from '~/views/Hackathons';
 
-function HackathonsPage() {
-  return <Hackathons />;
-}
+const HackathonsPage = () => <Hackathons />
 
 export default HackathonsPage;

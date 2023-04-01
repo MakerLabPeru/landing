@@ -1,7 +1,6 @@
-import Logo from './Navbar/Logo';
+import {Logo} from './Logo';
 
-function Footer() {
-  return (
+const Footer = () => (
     <footer>
       <nav className="pt-8 px-2 py-2.5 bg-neutral-900 md:pt-0">
         <div className="flex container flex-wrap justify-between items-center mx-auto flex-col md:flex-row ">
@@ -90,7 +89,6 @@ function Footer() {
         </a>
       </div>
     </footer>
-  );
-}
+  )
 
 export default Footer;

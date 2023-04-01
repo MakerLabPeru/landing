@@ -6,6 +6,7 @@ parser: '@typescript-eslint/parser'
 extends:
   - plugin:@next/next/recommended
   - '@mklp/eslint-config/react'
+  - plugin:@typescript-eslint/recommended
   - prettier
 
 settings:
@@ -41,18 +42,22 @@ rules:
         - jsx
         - tsx
 
+  react/button-has-type: off
+
 overrides:
   - files:
       - "*.ts"
       - "*.tsx"
     rules:
       no-undef: off
+      react/prop-types: off
 
   - files: '*.stories.*'
     rules:
       import/no-extraneous-dependencies:
         - error
         - devDependencies: true
+
   - files:
       - jest.setup.js
       - '*.test.*'
@@ -62,3 +67,8 @@ overrides:
       - plugin:jest/recommended
     env:
       jest/globals: true
+
+  - files:
+      - "**/__mocks__/**/*"
+    rules:
+      "@typescript-eslint/no-var-requires": off

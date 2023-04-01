@@ -1,7 +1,5 @@
 import FAQ from '~/views/FAQ';
 
-function FAQPage() {
-  return <FAQ />;
-}
+const FAQPage = () => <FAQ />
 
 export default FAQPage;

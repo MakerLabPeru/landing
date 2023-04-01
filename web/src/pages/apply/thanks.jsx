@@ -1,7 +1,5 @@
 import Thanks from '~/views/Apply/Thanks';
 
-function ThanksPage() {
-  return <Thanks />;
-}
+const ThanksPage = () => <Thanks />
 
 export default ThanksPage;

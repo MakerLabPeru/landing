@@ -1,7 +1,5 @@
 import Coach from '~/views/Coach';
 
-function CoachPage() {
-  return <Coach />;
-}
+const CoachPage = () => <Coach />
 
 export default CoachPage;

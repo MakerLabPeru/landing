@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import {ReactNode} from 'react';
 import useMeasure from 'react-use-measure';
-import {useSpring, animated} from 'react-spring';
+import {useSpring, animated} from '@react-spring/web';
 import {MdKeyboardArrowUp} from 'react-icons/md';
 import {
   Disclosure,
