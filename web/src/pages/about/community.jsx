@@ -1,7 +1,5 @@
-import Community from '~/views/About/Community';
+import Community from '~/views/Community';
 
-function CommunityPage() {
-  return <Community />;
-}
+const CommunityPage = () => <Community />
 
 export default CommunityPage;

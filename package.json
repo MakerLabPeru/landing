@@ -6,7 +6,7 @@
   ],
   "packageManager": "yarn@3.3.0",
   "devDependencies": {
-    "prettier": "^2.7.1"
+    "prettier": "^2.8.4"
   },
   "resolutions": {
     "react-test-renderer": "18.2.0"

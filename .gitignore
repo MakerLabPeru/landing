@@ -233,5 +233,8 @@ stack-outputs.json
 !.yarn/sdks
 !.yarn/versions
 
+# typescript
+*.tsbuildinfo
+
 # mac
 .DS_Store

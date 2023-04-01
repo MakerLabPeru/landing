@@ -1,11 +1,5 @@
-import Layout from '~/views/Layout';
-
-function Hackathons() {
-  return (
-    <Layout>
-      <h1 className="text-3xl font-bold underline">Hackathons mentoreadas</h1>
-    </Layout>
-  );
-}
+const Hackathons = () => (
+    <h1 className="text-3xl font-bold underline">Hackathons mentoreadas</h1>
+  )
 
 export default Hackathons;

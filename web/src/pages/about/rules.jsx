@@ -1,7 +1,5 @@
-import Rules from '~/views/About/Rules';
+import Rules from '~/views/Rules';
 
-function RulesPage() {
-  return <Rules />;
-}
+const RulesPage = () => <Rules />
 
 export default RulesPage;
