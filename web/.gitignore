@@ -8,6 +8,9 @@
 # testing
 /coverage
 
+# storybook build dir
+/storybook-static
+
 # next.js
 /.next/
 /out/

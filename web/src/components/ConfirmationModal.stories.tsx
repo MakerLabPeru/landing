@@ -6,9 +6,11 @@ export default {
   component: ConfirmationModal,
   parameters: {
     docs: {
-      inlineStories: false,
-    }
-  }
+      story: {
+        inline: false,
+      },
+    },
+  },
 } as ComponentMeta<typeof ConfirmationModal>;
 
 const Template: ComponentStory<typeof ConfirmationModal> = args => (
@@ -24,6 +26,8 @@ Default.args = {
 
 Default.parameters = {
   docs: {
-    iframeHeight: 300,
-  }
+    story: {
+      iframeHeight: 300,
+    },
+  },
 };
