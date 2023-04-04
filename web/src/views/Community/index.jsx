@@ -1,6 +1,14 @@
 import Image from "next/image";
-import {about1, about2, about3, about4, about5, learning, timelessness, personalization, community} from "../../../public";
-import ValueIcon from "../../components/ValueIcon";
+import about1 from "~public/images/about_1.png";
+import about2 from "~public/images/about_2.png";
+import about3 from "~public/images/about_3.png";
+import about4 from "~public/images/about_4.png";
+import about5 from "~public/images/about_5.png";
+import learning from "~public/icons/learning.svg";
+import timelessness from "~public/icons/timelessness.svg";
+import personalization from "~public/icons/personalization.svg";
+import community from "~public/icons/community.svg";
+import ValueIcon from "./ValueIcon";
 
 const Community = () => (
   <div className="container mt-10 md:mt-16 divide-y divide-solid md:divide-y md:divide-white">
