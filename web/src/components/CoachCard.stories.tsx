@@ -17,3 +17,12 @@ Default.args = {
   name: 'Aurelio Denegri',
   title: 'Coach frontend',
 };
+
+Default.parameters = {
+  testRunner: {
+    screenshots: {
+      // TODO: Enable once we have an stable coach image
+      disable: true,
+    }
+  }
+}

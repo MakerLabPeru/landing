@@ -12,15 +12,6 @@ const extractViewports = compose(
   path(['parameters', 'viewport', 'viewports']),
 );
 
-const waitForAnimations = page =>
-  page
-    .locator('#storybook-root')
-    .evaluate(e =>
-      Promise.all(
-        e.getAnimations({subtree: true}).map(animation => animation.finished),
-      ),
-    );
-
 export default {
   setup() {
     expect.extend({toMatchImageSnapshot});
@@ -46,23 +37,25 @@ export default {
     const screenshotsConfig = storyContext?.parameters?.testRunner
       ?.screenshots ?? {disable: false, viewports: []};
 
-    if (!screenshotsConfig) {
+    if (screenshotsConfig.disable) {
       return;
     }
 
     for (const viewport of screenshotsConfig.viewports) {
       await page.setViewportSize(viewports[viewport]);
 
-      await waitForAnimations(page);
-
-      const image = await page.screenshot({
-        scale: 'css',
-        type: 'png',
-      });
+      const image = await page
+        .locator('#storybook-root > *')
+        .first()
+        .screenshot({
+          type: 'png',
+          animations: 'disabled',
+        });
 
       expect(image).toMatchImageSnapshot({
         customSnapshotsDir,
         customSnapshotIdentifier: `${context.id}__${viewport}`,
+        blur: 1,
       });
     }
   },

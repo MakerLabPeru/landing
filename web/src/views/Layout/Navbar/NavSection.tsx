@@ -1,7 +1,7 @@
 import clsx from 'clsx';
-import {useCallback, forwardRef, ReactNode, ComponentProps} from 'react';
+import {useCallback, forwardRef, useRef, ReactNode, ComponentProps} from 'react';
 import {useRouter} from 'next/router';
-import useMeasure from 'react-use-measure';
+import useSize from '@react-hook/size';
 import {ToggleButton} from '@accessible/toggle-button';
 import {MdKeyboardArrowUp} from 'react-icons/md';
 import {Popover, Target, Trigger} from '@accessible/popover';
@@ -62,7 +62,8 @@ const NavSectionContentMobile = ({
   children,
   isOpen,
 }: NavSectionContentMobile) => {
-  const [ref, {height}] = useMeasure();
+  const ref = useRef();
+  const [_, height] = useSize(ref);
   return (
     <div
       className="md:hidden overflow-hidden bg-neutral-800 transition-[height] duration-300"
