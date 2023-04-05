@@ -1,9 +1,5 @@
 import {expect} from '@storybook/jest';
-import {
-  userEvent,
-  within,
-  waitFor,
-} from '@storybook/testing-library';
+import {userEvent, within, waitFor} from '@storybook/testing-library';
 import {ComponentStory, ComponentMeta} from '@storybook/react';
 
 import {Disclosure} from '~/components';
@@ -20,7 +16,7 @@ const Template: ComponentStory<typeof Disclosure> = args => (
 export const Open = Template.bind({});
 
 Open.args = {
-  open: false,
+  open: true,
   title: '¿Qué es el MakerLab?',
   children: `MakerLab es una comunidad tecnológica que une a varias
     personas con la misma pasión de aprender y enseñar.`,
@@ -29,7 +25,7 @@ Open.args = {
 export const Closed = Template.bind({});
 
 Closed.args = {
-  open: true,
+  open: false,
   title: '¿Qué es el MakerLab?',
   children: `MakerLab es una comunidad tecnológica que une a varias
     personas con la misma pasión de aprender y enseñar.`,
@@ -41,6 +37,15 @@ Default.args = {
   title: 'Titulo',
   children: `Texto de contenido`,
 };
+
+Default.parameters = {
+  testRunner: {
+    screenshots: {
+      disable: true,
+    },
+  },
+};
+
 Default.play = async ({args, canvasElement}) => {
   const canvas = within(canvasElement);
 
@@ -54,5 +59,7 @@ Default.play = async ({args, canvasElement}) => {
 
   await userEvent.click(canvas.getByRole('button'));
 
-  expect(canvas.queryByText(args.children)).not.toBeVisible();
+  await waitFor(async () =>
+    expect(canvas.queryByText(args.children)).not.toBeVisible(),
+  );
 };

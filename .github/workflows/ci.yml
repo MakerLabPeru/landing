@@ -28,7 +28,12 @@ jobs:
           npx concurrently -k -s first --raw \
             "npx http-server storybook-static --port 6006 --silent" \
             "npx wait-on tcp:127.0.0.1:6006 && yarn test-storybook --coverage"
-
+      - name: Upload image diffs
+        uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: sb-snapshots-diff
+          path: web/.storybook/__snapshots__/__diff_output__/
 
   lint:
     runs-on: ubuntu-latest

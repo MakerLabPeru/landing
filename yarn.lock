@@ -10057,6 +10057,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"get-stdin@npm:^5.0.1":
+  version: 5.0.1
+  resolution: "get-stdin@npm:5.0.1"
+  checksum: f9784638ad3e68a0a8bdc031aedf0fca749843cd134956fbd4f3bbac17c359e0fb9210343fcbed72ee79fb19d8e4c49b7a6e742cc5d44e94ac1405e9371d4b3e
+  languageName: node
+  linkType: hard
+
 "get-stream@npm:^6.0.0":
   version: 6.0.1
   resolution: "get-stream@npm:6.0.1"
@@ -10285,6 +10292,13 @@ __metadata:
   version: 0.1.2
   resolution: "globrex@npm:0.1.2"
   checksum: adca162494a176ce9ecf4dd232f7b802956bb1966b37f60c15e49d2e7d961b66c60826366dc2649093cad5a0d69970cfa8875bd1695b5a1a2f33dcd2aa88da3c
+  languageName: node
+  linkType: hard
+
+"glur@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "glur@npm:1.1.2"
+  checksum: d80a50fe7f713a564cf50a8e46e2385e5256233c1180b94c06dfdf038655c8b11aa648dd8516b66025abfe437f4201aa10c0e759b68b9a37241375707cf107ea
   languageName: node
   linkType: hard
 
@@ -11713,6 +11727,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jest-image-snapshot@npm:^6.1.0":
+  version: 6.1.0
+  resolution: "jest-image-snapshot@npm:6.1.0"
+  dependencies:
+    chalk: ^4.0.0
+    get-stdin: ^5.0.1
+    glur: ^1.1.2
+    lodash: ^4.17.4
+    mkdirp: ^0.5.1
+    pixelmatch: ^5.1.0
+    pngjs: ^3.4.0
+    rimraf: ^2.6.2
+    ssim.js: ^3.1.1
+  peerDependencies:
+    jest: ">=20 <=29"
+  checksum: e04eb48947ce5184aa19afdd41fd2e809542fbf4e335d6302efe15cb04e8df46df40fc86c81b0dd4ef0dd2a35879c92160a7d507c7888ef477e799cbcc4255ae
+  languageName: node
+  linkType: hard
+
 "jest-junit@npm:^14.0.0":
   version: 14.0.1
   resolution: "jest-junit@npm:14.0.1"
@@ -12849,7 +12882,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash@npm:^4.17.15, lodash@npm:^4.17.20, lodash@npm:^4.17.21":
+"lodash@npm:^4.17.15, lodash@npm:^4.17.20, lodash@npm:^4.17.21, lodash@npm:^4.17.4":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: eb835a2e51d381e561e508ce932ea50a8e5a68f4ebdd771ea240d3048244a8d13658acbd502cd4829768c56f2e16bdd4340b9ea141297d472517b83868e677f7
@@ -13703,7 +13736,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mkdirp@npm:^0.5.4":
+"mkdirp@npm:^0.5.1, mkdirp@npm:^0.5.4":
   version: 0.5.6
   resolution: "mkdirp@npm:0.5.6"
   dependencies:
@@ -14641,6 +14674,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"pixelmatch@npm:^5.1.0":
+  version: 5.3.0
+  resolution: "pixelmatch@npm:5.3.0"
+  dependencies:
+    pngjs: ^6.0.0
+  bin:
+    pixelmatch: bin/pixelmatch
+  checksum: f542713d89536551181ad9ddb666a1792ba00a8632d831093232a075cb3ccac05856e7a453ed7d0a41aaef64dcb5962e8ae5cbe646dd2761790d8ee51b0a0743
+  languageName: node
+  linkType: hard
+
 "pkg-dir@npm:^3.0.0":
   version: 3.0.0
   resolution: "pkg-dir@npm:3.0.0"
@@ -14685,6 +14729,20 @@ __metadata:
   bin:
     playwright: cli.js
   checksum: 97c6fff2835878da856bf1f587ec4cdcbcc9aa61c0efcf592633f6df37eabbb9e59d7a2ef994ec9283338e43ef80e278d6d52fed5f7c29abd0408fac0f69b3ca
+  languageName: node
+  linkType: hard
+
+"pngjs@npm:^3.4.0":
+  version: 3.4.0
+  resolution: "pngjs@npm:3.4.0"
+  checksum: 8bd40bd698abd16b72c97b85cb858c80894fbedc76277ce72a784aa441e14795d45d9856e97333ca469b34b67528860ffc8a7317ca6beea349b645366df00bcd
+  languageName: node
+  linkType: hard
+
+"pngjs@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "pngjs@npm:6.0.0"
+  checksum: ab6c285086060087097eab9fe6b5a528a24f9e79c03dea2b4fd6264ed4fdb5beff4a3257eeeaf2a9dc18249b539609c2a4e4013c567164a1f6b5ba2c974d5ecb
   languageName: node
   linkType: hard
 
@@ -15908,7 +15966,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rimraf@npm:^2.6.1":
+"rimraf@npm:^2.6.1, rimraf@npm:^2.6.2":
   version: 2.7.1
   resolution: "rimraf@npm:2.7.1"
   dependencies:
@@ -16444,6 +16502,13 @@ __metadata:
   version: 1.0.3
   resolution: "sprintf-js@npm:1.0.3"
   checksum: 19d79aec211f09b99ec3099b5b2ae2f6e9cdefe50bc91ac4c69144b6d3928a640bb6ae5b3def70c2e85a2c3d9f5ec2719921e3a59d3ca3ef4b2fd1a4656a0df3
+  languageName: node
+  linkType: hard
+
+"ssim.js@npm:^3.1.1":
+  version: 3.5.0
+  resolution: "ssim.js@npm:3.5.0"
+  checksum: 3f3a63ac8bec9c45e9f72252b786dcb4c91d7a74316b49c20e7935fd6e3869541e9324233b00eb0ab6bd15701016becd62740a5fb8c98f7b5115a9237efb2d4a
   languageName: node
   linkType: hard
 
@@ -17841,6 +17906,7 @@ __metadata:
     hamburger-react: ^2.5.0
     jest: ^29.3.1
     jest-environment-jsdom: ^29.3.1
+    jest-image-snapshot: ^6.1.0
     next: ^13.2.4
     postcss: ^8.4.12
     prettier: ^2.8.4
