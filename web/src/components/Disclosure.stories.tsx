@@ -51,11 +51,10 @@ Default.play = async ({args, canvasElement}) => {
 
   expect(canvas.queryByText(args.children)).not.toBeVisible();
 
-  await userEvent.click(canvas.getByRole('button'));
-
-  await waitFor(async () =>
-    expect(await canvas.getByText(args.children)).toBeVisible(),
-  );
+  await waitFor(async () => {
+    await userEvent.click(canvas.getByRole('button'));
+    expect(await canvas.getByText(args.children)).toBeVisible();
+  });
 
   await userEvent.click(canvas.getByRole('button'));
 
