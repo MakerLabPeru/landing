@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint --ext js,jsx,ts,tsx src",
+    "lint": "next lint -d src",
     "test": "jest",
     "test-storybook": "test-storybook",
     "storybook": "storybook dev -p 6006 -s ./public",
