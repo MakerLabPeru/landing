@@ -55,7 +55,12 @@ export default {
       expect(image).toMatchImageSnapshot({
         customSnapshotsDir,
         customSnapshotIdentifier: `${context.id}__${viewport}`,
-        blur: 1,
+        comparisonMethod: 'ssim',
+        customDiffConfig: {
+          ssim: 'fast',
+        },
+        failureThreshold: 0.01,
+        failureThresholdType: 'percent'
       });
     }
   },
