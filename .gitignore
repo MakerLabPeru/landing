@@ -235,3 +235,6 @@ stack-outputs.json
 
 # typescript
 *.tsbuildinfo
+
+# mac
+.DS_Store
