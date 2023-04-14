@@ -6,6 +6,6 @@ charset = utf-8
 end_of_line = lf
 insert_final_newline = true
 
-[*.js]
+[*.{js,jsx,mjs,ts,tsx}]
 indent_size = 2
 quote_type = single

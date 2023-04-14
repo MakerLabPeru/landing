@@ -1,7 +1,7 @@
 import clsx from 'clsx';
-import {useEffect, ReactNode} from 'react';
+import {useEffect, useRef, ReactNode} from 'react';
 import {useRouter} from 'next/router';
-import useMeasure from 'react-use-measure';
+import useSize from '@react-hook/size';
 import {animated, useSpring} from '@react-spring/web';
 import Hamburger from 'hamburger-react';
 import {useBit} from '~/hooks';
@@ -25,7 +25,8 @@ const useMenuOpenState = () => {
 };
 
 const useMenuSpring = (isOpen: boolean) => {
-  const [ref, {height}] = useMeasure();
+  const ref = useRef();
+  const [_, height] = useSize(ref);
   const mobileSpring = useSpring({
     top: isOpen ? 0 : -height || -1000,
   });

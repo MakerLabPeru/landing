@@ -1,6 +1,7 @@
 import clsx from 'clsx';
-import {ReactNode} from 'react';
-import useMeasure from 'react-use-measure';
+import {useRef, ReactNode} from 'react';
+import useSize from '@react-hook/size';
+import usePrevious from '@react-hook/previous';
 import {useSpring, animated} from '@react-spring/web';
 import {MdKeyboardArrowUp} from 'react-icons/md';
 import {
@@ -21,19 +22,25 @@ type DisclosureProps = {
 type DisclosureContentProps = Omit<DisclosureProps, 'open'>;
 
 const DisclosureContent = ({title, children}: DisclosureContentProps) => {
-  const [ref, bounds] = useMeasure();
+  const ref = useRef(null);
+  const [width, height] = useSize(ref);
+  const previousWidth = usePrevious(width);
   const {isOpen} = useDisclosure();
   const {
     theme: {colors},
   } = useTailwindConfig();
 
+  const immediate = !width || width !== previousWidth;
+
   const triggerStyleSpring = useSpring({
     backgroundColor: isOpen ? colors.primary['600'] : colors.slate['50'],
     color: isOpen ? colors.gray['50'] : colors.zinc['900'],
+    immediate,
   });
   const targetStyleSpring = useSpring({
-    height: isOpen ? bounds.height : 0,
+    height: isOpen ? height || 'unset' : 0,
     opacity: isOpen ? 1 : 0,
+    immediate,
   });
 
   return (

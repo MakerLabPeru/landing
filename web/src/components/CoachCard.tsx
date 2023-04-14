@@ -3,8 +3,6 @@ import {ComponentPropsWithoutRef} from 'react';
 import Image from 'next/image';
 import {GoPlus} from 'react-icons/go';
 
-import styles from './CoachCard.module.css';
-
 type CoachCardProps = {
   img: string;
   name: string;
@@ -14,7 +12,6 @@ type CoachCardProps = {
 export default ({img, title, name, ...rest}: CoachCardProps) => (
   <a
     className={clsx(
-      styles.root,
       'w-54 h-54 bg-gray-900 flex flex-col rounded select-none cursor-pointer',
     )}
     {...rest}
@@ -39,12 +36,12 @@ export default ({img, title, name, ...rest}: CoachCardProps) => (
       <div
         // Min height as aspect-ratio fallback
         className={clsx(
-          styles.button,
-          'mkl-btn bg-primary-600 h-full flex-none aspect-square min-w-[40px] text-zinc-50 flex rounded-tl rounded-br',
+          'mkl-btn bg-primary-600 h-full flex-none',
+          'aspect-square min-w-[40px] text-zinc-50 flex rounded-tl rounded-br'
         )}
         role="button"
       >
-        <GoPlus className="flex-1 h-full p-2" />
+        <GoPlus className="flex-1 h-full p-2 hover:bg-stone-700" />
       </div>
     </div>
   </a>
