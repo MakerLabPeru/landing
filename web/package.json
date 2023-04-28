@@ -23,6 +23,7 @@
     "@react-spring/web": "^9.7.1",
     "@storybook/jest": "next",
     "clsx": "^1.2.1",
+    "formik": "^2.2.9",
     "hamburger-react": "^2.5.0",
     "next": "^13.2.4",
     "ramda": "^0.28.0",
@@ -30,6 +31,7 @@
     "react-click-away-listener": "^2.2.2",
     "react-dom": "^18.2.0",
     "react-icons": "^4.6.0",
+    "yup": "^1.1.1",
     "~": "link:src",
     "~public": "link:public"
   },
