@@ -17,7 +17,7 @@ export const DynamicFieldArray = ({ name }: LinksFieldArrayProps) => {
         {({ push, remove }) => (
           <div>
             {field.value.map((link: { url: string }, index: number) => (
-              <div className="grid grid-cols-1 space-y-2 mt-2 md:space-y-1" key={index}>
+              <div className="grid grid-cols-1 space-y-2 mt-2 md:space-y-1">
                 <div className="flex items-center space-x-2">
                   <Field className={styles.dynamicField} name={`${name}.${index}.url`} />
                   {index !== 0 && (
