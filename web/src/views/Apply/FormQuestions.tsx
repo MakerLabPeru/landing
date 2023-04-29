@@ -1,36 +1,27 @@
-import Image from "next/image";
-import deleteIcon from "~public/icons/close.svg";
-import addIcon from "~public/icons/plus.svg";
-import {Form, Formik, Field, ErrorMessage, FieldArray} from "formik";
+import {Form, Formik, Field, ErrorMessage} from "formik";
 import * as Yup from 'yup';
-
-const styles = {
-  label: 'block text-gray-700 text-sm font-bold pt-2 pb-1',
-  field:
-    'bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none',
-  dynamicField:
-    'bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none',
-  button:
-    ' bg-gray-700 text-white font-bold py-2 px-4 w-full rounded hover:bg-gray-600',
-  errorMsg: 'text-red-500 text-sm',
-}
+import {TitledField} from "../../components/TitledField";
+import {DynamicFieldArray} from "../../components/DynamicFieldArray";
+import {styles} from "../../styles/tailwindGlobals";
 
 export const FormQuestions = () => {
   const formSchema = Yup.object().shape({
-    firstName: Yup.string().required('Campo obligatorio'),
-    lastName: Yup.string().required('Campo obligatorio'),
-    email: Yup.string().email('Correo inválido').required('Campo obligatorio'),
-    institution:  Yup.string().required('Campo obligatorio'),
+    firstName: Yup.string().required('Debes incluir tu nombre'),
+    lastName: Yup.string().required('Debes incluir tu apellido'),
+    email: Yup.string().email('Correo inválido').required('Debes incluir tu email'),
+    institution:  Yup.string().required('Debes incluir tu centro de estudios'),
     links: Yup.array()
       .of(
         Yup.object().shape({
-          url: Yup.string().required('Campo obligatorio'),
+          url: Yup.string().required('Debes incluir tu link personal'),
         })
       )
-      .required('Tiene que colocar al menos 1 link'),
-    projectUrl:  Yup.string().required('Campo obligatorio'),
-    reason:  Yup.string().required('Campo obligatorio'),
-    topics:  Yup.string().required('Campo obligatorio'),
+      .min(1, 'Debes incluir al menos un link personal')
+      .max(5, 'No se pueden agregar más de 5 links personales')
+      .required('Tiene que colocar al menos un link personal'),
+    projectUrl:  Yup.string().required('Debes incluir el enlace al proyecto'),
+    reason:  Yup.string().required('Debes incluir este campo'),
+    topics:  Yup.string().required('Debes incluir este campo'),
   })
 
   const initialValues = {
@@ -62,33 +53,13 @@ export const FormQuestions = () => {
         validationSchema={formSchema}
         onSubmit={handleSubmit}
       >
-        {({ values }) => (
+        {({ errors, touched }) => (
           <Form>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 gap-y-5">
-              <div>
-                {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-                <label className={styles.label} htmlFor="firstName">Nombres *</label>
-                <Field className={styles.field} id="firstName" name="firstName"/>
-                <ErrorMessage component='a' className={styles.errorMsg} name='firstName' />
-              </div>
-              <div>
-                {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-                <label className={styles.label} htmlFor="lastName">Apellidos *</label>
-                <Field className={styles.field} id="lastName" name="lastName"/>
-                <ErrorMessage component='a' className={styles.errorMsg} name='lastName' />
-              </div>
-              <div>
-                {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-                <label className={styles.label} htmlFor="email">Correo electrónico *</label>
-                <Field className={styles.field} id="email" name="email"/>
-                <ErrorMessage component='a' className={styles.errorMsg} name='email' />
-              </div>
-              <div>
-                {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-                <label className={styles.label} htmlFor="institution">Centro de estudios *</label>
-                <Field className={styles.field} id="institution" name="institution"/>
-                <ErrorMessage component='a' className={styles.errorMsg} name='institution' />
-              </div>
+              <TitledField name="firstName" label="Nombres *"/>
+              <TitledField name="lastName" label="Apellidos *"/>
+              <TitledField name="email" label="Correo electrónico *"/>
+              <TitledField name="institution" label="Centro de estudios *"/>
             </div>
             <div className="grid grid-cols-1 gap-y-4">
               <h1 className="text-3xl font-bold mt-5">Preguntas</h1>
@@ -98,54 +69,16 @@ export const FormQuestions = () => {
                   Incluye cualquier link personal que tengas (Github, LinkedIn, pagina web personal, etc)
                 </p>
               </div>
-              <div className="w-80 md:w-8/12 md:-mt-5">
-                <FieldArray name="links">
-                  {({ push, remove }) => (
-                    <div>
-                      {values.links.map((link, index) => (
-                        <div className="grid grid-cols-1 space-y-2 mt-2 md:-space-y-2">
-                          <div className="flex items-center space-x-2">
-                            <Field className={styles.dynamicField} name={`links.${index}.url`}/>
-                            {
-                              index !== 0 && (
-                                <button
-                                  type="button"
-                                  className="p-1 text-gray-500 hover:text-gray-800 focus:outline-none focus:text-gray-800"
-                                  onClick={() => remove(index)}
-                                >
-                                  <Image
-                                    src={deleteIcon}
-                                    className="w-8 px-1 md:w-14 md:px-3"
-                                    alt="Delete"
-                                  />
-                                </button>
-                              )
-                            }
-                            {
-                              index === 0 && (
-                                <button type="button" onClick={() => push({ url: '' })}>
-                                  <Image
-                                    src={addIcon}
-                                    className="h-10 w-10 px-2 md:h-16 md:w-16 md:px-4"
-                                    alt="Add"
-                                  />
-                                </button>
-                              )
-                            }
-                          </div>
-                          <div>
-                            <ErrorMessage
-                              name={`links.${index}.url`}
-                              component='div'
-                              className={styles.errorMsg}
-                            />
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </FieldArray>
-              </div>
+              <DynamicFieldArray name="links"/>
+               { typeof errors.links === 'string' ?(
+                <div>
+                  <ErrorMessage
+                    name="links"
+                    component="div"
+                    className={styles.errorMsg}
+                  />
+                </div>
+               ) : null}
               <div>
                 <h2>Adjunta el enlace del código de algún programa que hayas desarrollado o que estés desarrollando *</h2>
                 <p style={{fontSize:"0.85rem", color:"gray"}}>
@@ -160,18 +93,8 @@ export const FormQuestions = () => {
                 <Field className={styles.field} name="projectUrl"/>
                 <ErrorMessage component='a' className={styles.errorMsg} name='projectUrl' />
               </div>
-              <div>
-                {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-                <label className={styles.label} htmlFor="reason">¿Por qué quieres asistir a MakerLab?</label>
-                <Field className={styles.field} name="reason"/>
-                <ErrorMessage component='a' className={styles.errorMsg} name='reason' />
-              </div>
-              <div>
-                {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-                <label className={styles.label} htmlFor="topics">¿Qué quieres aprender durante tu estadia en el MakerLab?</label>
-                <Field className={styles.field} name="topics"/>
-                <ErrorMessage component='a' className={styles.errorMsg} name='topics' />
-              </div>
+              <TitledField name="reason" label="¿Por qué quieres asistir a MakerLab?"/>
+              <TitledField name="topics" label="¿Qué quieres aprender durante tu estadia en el MakerLab?"/>
               <div>
                 <button
                   className="mt-2 mb-10 bg-red-700 rounded-sm px-5 py-2 text-white

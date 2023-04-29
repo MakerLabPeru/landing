@@ -1,4 +1,4 @@
-import {CircleIcon} from "../../components/CircleIcon";
+import {CircleIcon} from "~/components";
 
 export const FormCircles = () => (
   <div className="flex items-center justify-between">

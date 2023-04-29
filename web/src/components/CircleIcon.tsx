@@ -12,6 +12,21 @@ interface CircleIconProps {
 export const CircleIcon = ({icon, message}: CircleIconProps) => {
   const [isHovered, setIsHovered] = useState(false);
 
+  const variants = {
+    list: {
+      src: list,
+      className: "w-8/12 md:w-8/12"
+    },
+    interview: {
+      src: interview,
+      className: "w-9/12 md:w-9/12"
+    },
+    check: {
+      src: check,
+      className: "w-9/12 md:w-7/12"
+    }
+  }
+
   return (
     <div
       className="relative flex items-center justify-center"
@@ -21,24 +36,11 @@ export const CircleIcon = ({icon, message}: CircleIconProps) => {
       <div className={`rounded-full h-20 w-20 md:h-28 md:w-28 flex items-center justify-center transition-colors duration-100 ${
         isHovered ? 'bg-red-700' : 'bg-gray-600'
       }`}>
-        {icon === 'list' && (<Image
-          src={list}
+        <Image
           style={{filter: 'invert(1)'}}
-          className="w-8/12 md:w-8/12"
           alt={icon}
-        />)}
-        {icon === 'interview' && (<Image
-          src={interview}
-          style={{filter: 'invert(1)'}}
-          className="w-9/12 md:w-9/12"
-          alt={icon}
-        />)}
-        {icon === 'check' && (<Image
-          src={check}
-          style={{filter: 'invert(1)'}}
-          className="w-9/12 md:w-7/12"
-          alt={icon}
-        />)}
+          {...variants[icon]}
+        />
       </div>
       <div>
         {isHovered && (
