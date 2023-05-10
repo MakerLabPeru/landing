@@ -106,7 +106,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@accessible/use-id@npm:^1.1.1":
+"@accessible/use-id@npm:^1.1.1, @accessible/use-id@npm:^1.1.2":
   version: 1.1.2
   resolution: "@accessible/use-id@npm:1.1.2"
   dependencies:
@@ -17797,6 +17797,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"uuid@npm:^9.0.0":
+  version: 9.0.0
+  resolution: "uuid@npm:9.0.0"
+  bin:
+    uuid: dist/bin/uuid
+  checksum: 8dd2c83c43ddc7e1c71e36b60aea40030a6505139af6bee0f382ebcd1a56f6cd3028f7f06ffb07f8cf6ced320b76aea275284b224b002b289f89fe89c389b028
+  languageName: node
+  linkType: hard
+
 "uvu@npm:^0.5.0":
   version: 0.5.6
   resolution: "uvu@npm:0.5.6"
@@ -17949,6 +17958,7 @@ __metadata:
     "@accessible/modal": ^3.0.2
     "@accessible/popover": ^3.5.1
     "@accessible/toggle-button": ^2.0.2
+    "@accessible/use-id": ^1.1.2
     "@babel/core": ^7.20.2
     "@mdx-js/react": ^1.6.22
     "@mklp/eslint-config": ^1.0.3
@@ -18004,6 +18014,7 @@ __metadata:
     storybook-css-modules: ^1.0.8
     tailwindcss: ^3.0.24
     typescript: ^4.9.3
+    uuid: ^9.0.0
     yup: ^1.1.1
     ~: "link:src"
     ~public: "link:public"
