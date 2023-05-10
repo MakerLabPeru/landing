@@ -6,9 +6,10 @@ import {styles} from "../styles/tailwindGlobals";
 
 interface LinksFieldArrayProps {
   name: string;
+  errors: unknown;
 }
 
-export const DynamicFieldArray = ({ name }: LinksFieldArrayProps) => {
+export const DynamicFieldArray = ({ name, errors }: LinksFieldArrayProps) => {
   const [field] = useField(name);
 
   return (
@@ -55,6 +56,15 @@ export const DynamicFieldArray = ({ name }: LinksFieldArrayProps) => {
           </div>
         )}
       </FieldArray>
+      { typeof errors === 'string' ? (
+        <div>
+          <ErrorMessage
+            name="links"
+            component="div"
+            className={styles.errorMsg}
+          />
+        </div>
+      ) : null}
     </div>
   );
 }
