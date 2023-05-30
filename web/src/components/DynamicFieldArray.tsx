@@ -1,5 +1,4 @@
 import {ErrorMessage, FieldArray, useField} from "formik";
-import {v4 as uuid} from 'uuid';
 import {styles} from "../styles/tailwindGlobals";
 import {LinkField} from "./LinkField";
 
@@ -22,7 +21,10 @@ export const DynamicFieldArray = ({name, errors}: LinksFieldArrayProps) => {
                 index={index}
                 push={push}
                 remove={remove}
-                key={uuid()}
+                key={
+                  /* eslint-disable-next-line react/no-array-index-key */
+                  index
+                }
               />
             ))}
           </div>

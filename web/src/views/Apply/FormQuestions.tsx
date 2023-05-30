@@ -9,7 +9,7 @@ export const FormQuestions = () => {
     firstName: Yup.string().required('Debes incluir tu nombre'),
     lastName: Yup.string().required('Debes incluir tu apellido'),
     email: Yup.string().email('Correo inválido').required('Debes incluir tu email'),
-    institution: Yup.string().required('Debes incluir tu centro de estudios'),
+    institution: Yup.string(),
     links: Yup.array()
       .of(
         Yup.object().shape({
