@@ -14,8 +14,7 @@ export const FormQuestions = () => {
       .of(
         Yup.object().shape({
           url: Yup.string()
-            .url('Debes incluir un link válido')
-            .required('Debes incluir tu link personal'),
+            .url('Debes incluir un link válido'),
         })
       )
       .min(1, 'Debes incluir al menos un link personal')
@@ -62,14 +61,15 @@ export const FormQuestions = () => {
               <TitledField name="firstName" label="Nombres *"/>
               <TitledField name="lastName" label="Apellidos *"/>
               <TitledField name="email" label="Correo electrónico *"/>
-              <TitledField name="institution" label="Centro de estudios *"/>
+              <TitledField name="institution" label="Centro de estudios"/>
             </div>
             <div className="grid grid-cols-1 gap-y-4">
               <h1 className="text-3xl font-bold mt-5">Preguntas</h1>
               <div>
-                <h2>Link personal *</h2>
+                <h2>Link personal</h2>
                 <p style={{fontSize: "0.85rem", color: "gray"}}>
-                  Incluye cualquier link personal que tengas (Github, LinkedIn, pagina web personal, etc)
+                  Puedes incluir uno o varios links personales que desees mostrarnos (GitHub, LinkedIn, página web personal, etc).
+                  Nos ayudarás mucho en tu proceso de postulación.
                 </p>
               </div>
               <DynamicFieldArray name="links" errors={errors.links}/>
