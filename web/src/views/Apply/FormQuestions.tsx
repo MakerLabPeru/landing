@@ -1,4 +1,4 @@
-import Node from 'react';
+import {ReactNode} from 'react';
 import {ErrorMessage, Field, Form, Formik} from 'formik';
 import * as Yup from 'yup';
 import {TitledField} from '../../components/TitledField';
@@ -23,7 +23,7 @@ const formSchema = Yup.object().shape({
     .required('Tiene que colocar al menos un link personal'),
   projectUrl: Yup.string()
     .url('Debes incluir un url válido')
-    .required('Debes incluir el enlace al proyecto'),
+    .required('Debes incluir un url válido'),
   reason: Yup.string().required('Debes incluir este campo'),
   topics: Yup.string().required('Debes incluir este campo'),
 });
@@ -43,7 +43,7 @@ const initialValues = {
   topics: '',
 };
 
-const SectionTitle = ({children}: {children: Node}) => (
+const SectionTitle = ({children}: {children: ReactNode}) => (
   <h2 className="font-bold text-neutral-200 text-3xl">{children}</h2>
 );
 
@@ -73,7 +73,7 @@ export const FormQuestions = () => {
             <div className="grid grid-cols-1 gap-y-4">
               <SectionTitle>Preguntas</SectionTitle>
               <div>
-                <h2>Links personales</h2>
+                <h2>Links personales *</h2>
                 <p style={{fontSize: '0.85rem', color: 'gray'}}>
                   Puedes incluir uno o varios links personales que desees
                   mostrarnos (GitHub, LinkedIn, página web personal, etc). Nos
@@ -107,11 +107,11 @@ export const FormQuestions = () => {
               </div>
               <TitledField
                 name="reason"
-                label="¿Por qué quieres asistir a MakerLab?"
+                label="¿Por qué quieres asistir a MakerLab? *"
               />
               <TitledField
                 name="topics"
-                label="¿Qué quieres aprender durante tu estadia en el MakerLab?"
+                label="¿Qué quieres aprender durante tu estadia en el MakerLab? *"
               />
               <div>
                 <button
