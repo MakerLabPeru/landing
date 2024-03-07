@@ -15,15 +15,13 @@ const formSchema = Yup.object().shape({
   links: Yup.array()
     .of(
       Yup.object().shape({
-        url: Yup.string().url('Debes incluir un link válido'),
+        url: Yup.string().url('Debes incluir una url válido'),
       }),
     )
-    .min(1, 'Debes incluir al menos un link personal')
-    .max(5, 'No se pueden agregar más de 5 links personales')
-    .required('Tiene que colocar al menos un link personal'),
+    .max(5, 'No se pueden agregar más de 5 links personales'),
   projectUrl: Yup.string()
-    .url('Debes incluir un url válido')
-    .required('Debes incluir un url válido'),
+    .url('Debes incluir una url válido')
+    .required('Debes incluir una url válido'),
   reason: Yup.string().required('Debes incluir este campo'),
   topics: Yup.string().required('Debes incluir este campo'),
 });
@@ -73,11 +71,11 @@ export const FormQuestions = () => {
             <div className="grid grid-cols-1 gap-y-4">
               <SectionTitle>Preguntas</SectionTitle>
               <div>
-                <h2>Links personales *</h2>
+                <h2>Links personales</h2>
                 <p style={{fontSize: '0.85rem', color: 'gray'}}>
                   Puedes incluir uno o varios links personales que desees
                   mostrarnos (GitHub, LinkedIn, página web personal, etc). Nos
-                  ayudarás mucho en tu proceso de postulación.
+                  ayudará mucho en tu proceso de postulación.
                 </p>
               </div>
               <DynamicFieldArray name="links" errors={errors.links} />
