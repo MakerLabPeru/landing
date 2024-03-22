@@ -4,7 +4,14 @@ module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     container: {
-      center: true
+      center: true,
+      screens: {
+        sm: '600px',
+        md: '728px',
+        lg: '984px',
+        xl: '984px',
+        '2xl': '984px',
+      },
     },
     extend: {
       fontFamily: {
