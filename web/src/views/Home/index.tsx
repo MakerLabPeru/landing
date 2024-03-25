@@ -13,7 +13,7 @@ const Home = () => (
     <Hero />
     <Support />
     <About />
-    {/*<LatestActivities />*/}
+    <LatestActivities />
   </div>
 );
 
