@@ -6,9 +6,11 @@ import {useNavContext} from './NavContext';
 type NavItemProps = {
   href?: string;
   active?: boolean;
-} & ComponentProps<'div'>;
+} & ComponentProps<'div'> & {
+  ref: ComponentProps<typeof Link>["ref"]
+};
 
-export const NavItem = forwardRef<HTMLDivElement, NavItemProps>(
+export const NavItem = forwardRef<HTMLAnchorElement, NavItemProps>(
   ({href, active = false, children, className, ...rest}, ref) => {
     const {isSection} = useNavContext() ?? {};
 

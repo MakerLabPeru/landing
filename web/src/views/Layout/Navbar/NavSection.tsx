@@ -37,7 +37,7 @@ type NavSectionHeaderProps = {
 } & IsOpenProps &
   ComponentProps<typeof NavItem>;
 
-const NavSectionHeader = forwardRef<HTMLDivElement, NavSectionHeaderProps>(
+const NavSectionHeader = forwardRef<HTMLAnchorElement, NavSectionHeaderProps>(
   ({className, subpath, label, isOpen, ...rest}, ref) => {
     const {pathname} = useRouter();
 

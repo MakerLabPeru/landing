@@ -1,0 +1,107 @@
+- id: 1
+  question: ¿Qué es MakerLab?
+  answer: |
+    MakerLab es una comunidad tecnológica que une a varias personas con la misma pasión de aprender y enseñar.
+
+- id: 2
+  question: ¿Dónde está ubicado MakerLab?
+  answer: |
+    Actualmente, nuestras sesiones se desarrollan los sábados de 10am a 5pm en el Open PUCP.
+
+- id: 3
+  question: Si no sé programar, ¿puedo asistir?
+  answer: |
+    No, el MakerLab es una comunidad para personas a quienes les apasiona programar. Si nunca antes haz programado,
+    no puedes saber siquiera si vas a disfrutar hacerlo.
+    
+    Si quieres aprender a programar, en internet existen muchos recursos con los cuales hacerlo por tu cuenta y a tu
+    propio ritmo. Python es un buen lenguaje de programación para empezar a programar (algunos cursos que recomendamos
+    son el de SoloLearn y el de CodeCademy)
+
+- id: 4
+  question: ¿Qué nivel de programación necesito?
+  answer: |
+    No es necesario que seas un experto programando, pero sí que hayas programado lo suficiente para saber que disfrutas
+    hacerlo.
+
+- id: 5
+  question: ¿Se tiene que pagar por asistir a MakerLab?
+  answer: |
+    No. MakerLab ha sido y siempre será gratuito.
+
+- id: 6
+  question: Tengo pensado iniciar mi propia Start-Up, ¿MakerLab es para mí?
+  answer: |  
+    Si bien nos alegra saber que tienes alguna idea tecnológica sobre la cual hacer un negocio, MakerLab es una
+    comunidad de aprendizaje donde nos centramos en mejorar nuestras habilidades de programación. Si no te gusta
+    programar y no quieres programar, MakerLab no es el lugar adecuado para ti.
+
+- id: 7
+  question: ¿Cuándo empiezan las convocatorias?
+  answer: |
+    En MakerLab no tenemos convocatorias oficiales, pero aceptamos nuevos candidatos cada cierto número de semanas
+    según lo que nuestra capacidad nos lo permita, por lo que si estás interesado en pertenecer a MakerLab puedes
+    seguir el proceso de postulación y nos contactaremos contigo.
+
+- id: 8
+  question: ¿Qué son los coaches?
+  answer: |
+    Los coaches son personas que ya han venido trabajando un tiempo con nosotros, conocen la dinámica de trabajo y
+    siguen nuestra filosofía Maker. Los coaches pueden ser o no ser expertos en algún lenguaje de programación, pero
+    son las personas más adecuadas para darte una introducción a lo que es la convivencia dentro de nuestra comunidad
+    y no te sientas solo al inicio.
+
+- id: 9
+  question: ¿Puedo ser coach en algún momento?
+  answer: |
+    Sí, pero necesitas un mínimo de 6 meses de estadía con nosotros hasta que te puedas familiarizar con nuestra
+    dinámica de trabajo y todo nuestro equipo.
+
+- id: 10
+  question: ¿Cómo puedo formar parte de MakerLab?
+  answer: |
+    Si después de haber conocido más sobre MakerLab y leído nuestro manual te interesa formar parte de nuestra
+    comunidad porque consideras que tus habilidades pueden mejorar exponencialmente con nosotros y que tienes los
+    criterios que buscamos, puedes postular con nosotros.
+
+- id: 11
+  question: ¿Cómo es la estadía en MakerLab?
+  answer: |
+    En MakerLab no dictamos clases ni tenemos una curricula estructurada. Sino que tratamos de crear un ambiente ameno
+    para que nuestros asistentes y Coaches compartan sus experiencias y aprendan de la forma que mejor se adapte a
+    ellos. En el MakerLab no te diremos que aprender. Te preguntaremos que es lo que quieres aprender y trataremos de
+    ayudarte lo mejor que podamos para que tú puedas guiar tu propio aprendizaje.
+
+- id: 12
+  question: Si no logro pasar la etapa de selección, ¿me van a comunicar el porqué?
+  answer: |
+    Por más que quisiéramos dar un feedback sobre las razones por las cuales un candidato no fue escogido, esto demanda
+    un tiempo considerable de parte de nuestro equipo y nos impide continuar evaluando a otros.
+    Sin embargo, somos muy honestos respecto al perfil que buscamos para los que quieran pertenecer a MakerLab y lo
+    puedes conocer en el manual.
+
+- id: 13
+  question: Si no logro pasar la etapa de selección, ¿puedo volver a postular?
+  answer: |
+    Sí, pero después de un periodo de dos meses a partir de la fecha en que has recibido tu respuesta.
+
+- id: 14
+  question: Logré pasar la etapa de selección, ¿cuántas faltas puedo tener?
+  answer: |
+    En realidad esperamos que no tengas ninguna y que te acomodes perfectamente en nuestra comunidad y nuestra forma de
+    trabajo, sin embargo, entendemos que hay situaciones que pueden exigir tu ausencia de vez en cuando, por lo que
+    tienes un límite de 3 faltas sin justificar dentro de un periodo de 6 meses.
+
+- id: 15
+  question: ¿Puedo retirarme de MakerLab?
+  answer: |
+    Si crees que es necesario, puedes hacerlo, sólo te pedimos que nos avises con anterioridad para poder abrir plazas
+    a nuevos candidatos que quieran ser parte de nuestra comunidad.
+    
+    En caso de no avisarnos, tendríamos que expulsarte y no podrías volver posteriormente a MakerLab.
+
+- id: 16
+  question: Si quiero volver a asistir a MakerLab, ¿debo postular de nuevo?
+  answer: |
+    No, siempre y cuando no te hayamos expulsado (ya sea por exceso de faltas, no avisarnos de tu retiro o alguna otra
+    razón). Solo es necesario que nos avises para que podamos asignarte de nuevo una vacante.
