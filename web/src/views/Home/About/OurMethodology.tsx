@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Button } from "~/components";
 
 const OurMethodology = () => (
-  <div className="flex flex-col gap-4 md:flex-row md:items-center">
+  <div className="flex flex-col gap-4 md:flex-row items-center">
     <Image
       src="/images/home-methodology-1.png"
       width={403}

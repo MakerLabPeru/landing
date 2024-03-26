@@ -1,11 +1,12 @@
+import Container from "~/components/Container";
 import WhoWeAre from "./WhoWeAre";
 import OurMethodology from "./OurMethodology";
 
 const About = () => (
-  <div className="m-4 space-y-12 md:container md:mx-auto">
+  <Container className="space-y-12 my-10">
     <WhoWeAre />
     <OurMethodology />
-  </div>
+  </Container>
 );
 
 export default About;
