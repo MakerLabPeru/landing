@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Button } from "../../../components";
+import { Button } from "~/components";
 
 const WhoWeAre = () => (
   <div className="flex flex-col gap-4 md:flex-row-reverse md:items-center">
