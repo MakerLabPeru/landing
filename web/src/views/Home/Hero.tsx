@@ -5,12 +5,9 @@ const Hero = () => (
   <main className="relative h-80 md:h-96">
     <Image
       fill
-      className="grayscale absolute z-0"
+      className="grayscale absolute z-0 object-cover"
       src="/images/home-hero-1.png"
       alt="Comunidad de MakerLab"
-      style={{
-        objectFit: "cover"
-      }}
     />
 
     <div
